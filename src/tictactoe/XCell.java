@@ -1,8 +1,13 @@
 package tictactoe;
 
-public class XCell implements Cell {
+// Leaf class (individual cell)
+public class XCell extends Cell {
+    public XCell() {
+        super('X');
+    }
+
     @Override
     public void display() {
-        System.out.print("X");
+        System.out.print("x");
     }
 }

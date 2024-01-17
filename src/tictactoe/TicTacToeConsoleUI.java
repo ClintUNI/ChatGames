@@ -71,8 +71,14 @@ class TicTacToeConsoleUI implements Observer {
                 checkRowCol(game.getBoard()[0][2], game.getBoard()[1][1], game.getBoard()[2][0]));
     }
 
-    private boolean checkRowCol(Cell c1, Cell c2, Cell c3) {
-        return (c1 instanceof XCell || c1 instanceof OCell) && c1.equals(c2) && c2.equals(c3);
+    private boolean checkRowCol(Component c1, Component c2, Component c3) {
+        if (c1 instanceof Cell && c2 instanceof Cell && c3 instanceof Cell) {
+            Cell cell1 = (Cell) c1;
+            Cell cell2 = (Cell) c2;
+            Cell cell3 = (Cell) c3;
+            return (cell1 instanceof XCell || cell1 instanceof OCell) && cell1.equals(cell2) && cell2.equals(cell3);
+        }
+        return false;
     }
 
     private boolean checkTie() {
@@ -89,4 +95,5 @@ class TicTacToeConsoleUI implements Observer {
         return true;
     }
 }
+
 

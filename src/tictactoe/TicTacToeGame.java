@@ -1,17 +1,16 @@
 package tictactoe;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class TicTacToeGame implements Observable {
-    public Cell[][] board;
+    public Component[][] board; // Change the type to Component
     private char currentPlayer;
     private List<Observer> observers;
     private CellFactory cellFactory;
 
     public TicTacToeGame(CellFactory cellFactory) {
         this.cellFactory = cellFactory;
-        board = new Cell[3][3];
+        board = new Component[3][3]; // Change the type to Component
         currentPlayer = 'X';
         observers = new ArrayList<>();
         initializeBoard();
@@ -29,7 +28,7 @@ public class TicTacToeGame implements Observable {
         return currentPlayer;
     }
 
-    public Cell[][] getBoard() {
+    public Component[][] getBoard() { // Change the return type to Component[][]
         return board;
     }
 
@@ -68,4 +67,5 @@ public class TicTacToeGame implements Observable {
         }
     }
 }
+
 

@@ -1,6 +1,11 @@
 package tictactoe;
 
-public class EmptyCell implements Cell {
+// Leaf class (individual cell)
+public class EmptyCell extends Cell {
+    public EmptyCell() {
+        super(' ');
+    }
+
     @Override
     public void display() {
         System.out.print(" ");

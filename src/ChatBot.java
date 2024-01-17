@@ -1,9 +1,7 @@
 import input.IntegerInputListener;
 import input.StringInputListener;
-import response.IntegerQuestion;
-import response.StringResponse;
-import response.StringQuestion;
-import response.ResponseMessage;
+import response.StringMessage;
+import response.ConsoleMessage;
 
 import java.util.Scanner;
 
@@ -12,10 +10,10 @@ public class ChatBot {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ResponseMessage response0 = new StringResponse("Pick a letter, it must be between A and D.");
-        StringQuestion response1 = new StringQuestion("B", "Good guess!");
-        StringQuestion response2 = new StringQuestion("", "Ready for the next game?");
-        StringResponse response4 = new StringResponse("Pick a number, it must be between 1 and 4.");
+        ConsoleMessage response0 = new StringMessage("Pick a letter, it must be between A and D.");
+        ConsolePrompt response1 = new ConsolePrompt("B", "Good guess!");
+        ConsolePrompt response2 = new ConsolePrompt("", "Ready for the next game?");
+        StringMessage response4 = new StringMessage("Pick a number, it must be between 1 and 4.");
         IntegerQuestion response5 = new IntegerQuestion(2, "Very good guess!");
 
         StringInputListener botInput1 = new StringInputListener(scanner, response1);

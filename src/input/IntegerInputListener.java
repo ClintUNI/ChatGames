@@ -1,7 +1,5 @@
 package input;
 
-import response.IntegerQuestion;
-
 import java.util.Scanner;
 
 public class IntegerInputListener implements InputListener, IntegerInput {

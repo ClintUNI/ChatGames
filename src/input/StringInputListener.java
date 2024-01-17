@@ -1,16 +1,14 @@
 package input;
 
-import response.StringQuestion;
-
 import java.util.Scanner;
 
 public class StringInputListener implements InputListener, StringInput {
 
     protected Scanner scanner;
 
-    protected StringQuestion response;
+    protected ConsolePrompt response;
 
-    public StringInputListener(Scanner scanner, StringQuestion response) {
+    public StringInputListener(Scanner scanner, ConsolePrompt response) {
         this.scanner = scanner;
         this.response = response;
     }

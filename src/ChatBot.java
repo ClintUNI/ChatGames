@@ -1,7 +1,7 @@
 import input.IntegerInputListener;
 import input.StringInputListener;
-import response.StringMessage;
-import response.ConsoleMessage;
+import message.StringMessage;
+import message.ConsoleMessage;
 
 import java.util.Scanner;
 

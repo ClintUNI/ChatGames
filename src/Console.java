@@ -1,4 +1,5 @@
 import message.ConsoleMessage;
+import message.MessageService;
 
 import java.util.Scanner;
 
@@ -6,8 +7,12 @@ public class Console {
 
     private final Scanner scanner;
 
+    public final MessageService messenger;
+
     public Console() {
         this.scanner = ScannerSingleton.create();
+
+        this.messenger = new MessageService();
     }
 
     public String readLine() {

@@ -1,6 +1,13 @@
 # EGChat
 A Java CLI chatbot.
 
+Cooperation: 
+  For 2 weeks, up until the hand-in date, we met up at the library in order to work and discuss this assignment. 
+  In the beginning, Joao suggested that we could make a TikTacToe console game. We had our idea, we just needed to execute it.
+  We spent the first few days sketching out diagrams for how we might implement this game, as well as further investigating design patterns.
+  I, CLint, took inspiration from this and went on a spree by creating a framework for interacting with a user through the console. Joao's ideas for execution 
+  of his game allowed me to gain insight into how I should design my framework.
+
 Structural Design Pattern:
 - Composite: João Tomás Santos
   - Component Interface (Component.java)
@@ -14,6 +21,9 @@ Structural Design Pattern:
   - NumberMessage - Clint E.
     - Used to adapt number values into ConsoleMessage based strings.
 
+- Proxy:
+  - MessageService - Clint E.
+    - This service acts as a proxy-like cache, when creating new ConsoleMessages with this proxy it will first check a dictionary to see if that exact message already exists. If it does, it will return it else it will create and store a new one.
 
 
 Creation Design Pattern:

@@ -4,19 +4,19 @@ public class ChatBot {
 
     public static void main(String[] args) {
         Console console = new Console();
-        String userReply = console.readLine(new ConsoleMessage("Hello, how are you?"));
+        String userReply = console.readLine(console.messenger.create("Hello, how are you?"));
 
         MatchInputResults positive = console.matchInput(userReply, new String[]{"Good", "Great", "Amazing", "Awesome"});
         MatchInputResults negative = console.matchInput(userReply, new String[]{"Bad", "Not good", "Not great", "Awful"});
 
         if (positive.isMatching()) {
             console.sendLine(
-                    new ConsoleMessage(
+                    console.messenger.create(
                             "Glad to hear that you're " + positive.getMatched().toLowerCase() + "!"
                     )
             );
         } else if (negative.isMatching()) {
-            console.sendLine(new ConsoleMessage("Awww, I hope that you feel better."));
+            console.sendLine(console.messenger.create("Awww, I hope that you feel better."));
         }
 
        // ScannerSingleton scanner = ScannerSingleton.getInstance(System.in);

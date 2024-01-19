@@ -3,14 +3,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TicTacToeGame implements Observable {
-    public Component[][] board; // Change the type to Component
+    public Component[][] board; 
     private char currentPlayer;
     private List<Observer> observers;
     private CellFactory cellFactory;
 
     public TicTacToeGame(CellFactory cellFactory) {
         this.cellFactory = cellFactory;
-        board = new Component[3][3]; // Change the type to Component
+        board = new Component[3][3]; 
         currentPlayer = 'X';
         observers = new ArrayList<>();
         initializeBoard();
@@ -28,7 +28,7 @@ public class TicTacToeGame implements Observable {
         return currentPlayer;
     }
 
-    public Component[][] getBoard() { // Change the return type to Component[][]
+    public Component[][] getBoard() { 
         return board;
     }
 

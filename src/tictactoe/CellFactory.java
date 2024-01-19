@@ -1,4 +1,3 @@
-// In src/tictactoe/CellFactory.java
 package tictactoe;
 
 public class CellFactory {

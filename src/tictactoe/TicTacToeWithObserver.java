@@ -1,4 +1,3 @@
-// In src/tictactoe/TicTacToeWithObserver.java
 package tictactoe;
 
 import java.util.Scanner;

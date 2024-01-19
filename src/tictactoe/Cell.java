@@ -1,11 +1,5 @@
 package tictactoe;
 
-// Component interface
-//interface Component {
-//    void display();
-//}
-
-// Leaf class (individual cell)
 public class Cell implements Component {
     private char content;
 

@@ -1,4 +1,3 @@
-// In src/tictactoe/Observable.java
 package tictactoe;
 
 interface Observable {

@@ -1,6 +1,5 @@
 package tictactoe;
 
-// Leaf class (individual cell)
 public class EmptyCell extends Cell {
     public EmptyCell() {
         super(' ');

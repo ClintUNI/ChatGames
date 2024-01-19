@@ -1,6 +1,8 @@
 # EGChat
 A Java CLI chatbot and with a TicTacToe game!!! Welcome to our programs.
 
+Github project link (https://github.com/ClintUNI/ChatGames)
+
 Autors:
 Clint Eschenhorst
 João Tomás Santos

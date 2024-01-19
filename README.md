@@ -1,5 +1,9 @@
 # EGChat
-A Java CLI chatbot.
+A Java CLI chatbot and with a TicTacToe game!!! Welcome to our programs.
+
+Autors:
+Clint Eschenhorst
+João Tomás Santos
 
 Cooperation: 
   For 2 weeks, up until the hand-in date, we met up at the library in order to work and discuss this assignment. 

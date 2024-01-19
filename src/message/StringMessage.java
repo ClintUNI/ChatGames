@@ -1,7 +1,6 @@
-package response;
+package message;
 
-public abstract class ConsoleMessage implements Message {
-
+public abstract class StringMessage implements Message {
     private String responseMessage;
 
     public void setMessage(String message) {

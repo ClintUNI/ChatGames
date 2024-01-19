@@ -1,29 +1,40 @@
-import input.IntegerInputListener;
-import input.StringInputListener;
-import response.StringMessage;
-import response.ConsoleMessage;
-
-import java.util.Scanner;
+import message.ConsoleMessage;
 
 public class ChatBot {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Console console = new Console();
+        String userReply = console.readLine(new ConsoleMessage("Hello, how are you?"));
 
-        ConsoleMessage response0 = new StringMessage("Pick a letter, it must be between A and D.");
-        ConsolePrompt response1 = new ConsolePrompt("B", "Good guess!");
-        ConsolePrompt response2 = new ConsolePrompt("", "Ready for the next game?");
-        StringMessage response4 = new StringMessage("Pick a number, it must be between 1 and 4.");
-        IntegerQuestion response5 = new IntegerQuestion(2, "Very good guess!");
+        MatchInputResults positive = console.matchInput(userReply, new String[]{"Good", "Great", "Amazing", "Awesome"});
+        MatchInputResults negative = console.matchInput(userReply, new String[]{"Bad", "Not good", "Not great", "Awful"});
 
-        StringInputListener botInput1 = new StringInputListener(scanner, response1);
-        IntegerInputListener botInput3 = new IntegerInputListener(scanner, response5);
+        if (positive.isMatching()) {
+            console.sendLine(
+                    new ConsoleMessage(
+                            "Glad to hear that you're " + positive.getMatched().toLowerCase() + "!"
+                    )
+            );
+        } else if (negative.isMatching()) {
+            console.sendLine(new ConsoleMessage("Awww, I hope that you feel better."));
+        }
 
-        response0.respond();
-        botInput1.beginInput();
-        response2.respond();
-        response4.respond();
-        botInput3.beginInput();
+       // ScannerSingleton scanner = ScannerSingleton.getInstance(System.in);
+
+//        ConsoleMessage response0 = new StringMessage("Pick a letter, it must be between A and D.");
+//        ConsolePrompt response1 = new ConsolePrompt("B", "Good guess!");
+//        ConsolePrompt response2 = new ConsolePrompt("", "Ready for the next game?");
+//        StringMessage response4 = new StringMessage("Pick a number, it must be between 1 and 4.");
+//        IntegerQuestion response5 = new IntegerQuestion(2, "Very good guess!");
+//
+//        StringInputListener botInput1 = new StringInputListener(scanner, response1);
+//        IntegerInputListener botInput3 = new IntegerInputListener(scanner, response5);
+//
+//        response0.respond();
+//        botInput1.beginInput();
+//        response2.respond();
+//        response4.respond();
+//        botInput3.beginInput();
     }
 //    private HashMap<String, Integer> possibleInputs; //[UserInput] = Number Index to locate the response
 //    private ArrayList<String> responses;

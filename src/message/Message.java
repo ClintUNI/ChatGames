@@ -1,4 +1,4 @@
-package response;
+package message;
 
 public interface Message {
 

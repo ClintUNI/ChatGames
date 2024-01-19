@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class TicTacToeWithObserver {
     public static void main(String[] args) {
-        CellFactory cellFactory = new CellFactory(); // You may need to adjust this based on your CellFactory implementation
+        CellFactory cellFactory = new CellFactory(); 
         TicTacToeGame game = new TicTacToeGame(cellFactory);
         TicTacToeConsoleUI consoleUI = new TicTacToeConsoleUI(game);
         Scanner scanner = new Scanner(System.in);
